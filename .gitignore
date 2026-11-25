@@ -41,5 +41,13 @@ report-*.json
 
 # AI Agent & Internal Governance (private files - strictly excluded)
 GEMINI.md
+*gemini*.md
 AGENTS.md
 .agents/
+.gemini/
+*.agent*
+.ag-kit-backups/
+graphify-out/
+.codex/
+__pycache__/
+*.pyc

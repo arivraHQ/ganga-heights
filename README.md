@@ -1,5 +1,12 @@
 # Ganga Heights by Arohan Realty — Kanpur
 
+> [!WARNING]
+> **⚠️ DEMO & SHOWCASE DISCLAIMER**  
+> This project is a fictional concept application developed strictly for **portfolio demonstration and technical showcase purposes**.  
+> - **Ganga Heights** and **Arohan Realty** are simulated real estate entities.  
+> - All telephone numbers, UP RERA registration IDs (`UPRERAAGT12894 / PRJ-KAN-2023-8821`), physical addresses, pricing, and homeowner reviews are **dummy/illustrative data**.  
+> - **DO NOT attempt to call these telephone numbers or visit this address for actual property bookings or site inspections.**
+
 > Architectural, trustworthy, quietly luxurious portfolio website crafted for Arohan Realty, Kanpur.  
 > Designed and engineered with bespoke architectural discipline, strict anti-AI-slop design intelligence, and zero generic templates.
 
@@ -110,3 +117,10 @@ npm run build
 # Run Playwright QA suite and capture 375px/1440px screenshots
 node scripts/qa_audit_all_sections.js
 ```
+
+---
+
+## 📄 License & Attribution
+
+**ARIVRA Demo** — A product by [Arivra Design Labs](https://arivra.com/).  
+Licensed under the [MIT License](LICENSE).

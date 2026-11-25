@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { SITE_DATA } from "@/content/site";
 import { ArrowUpRight, ShieldCheck, Phone, MessageSquare, MapPin, Clock } from "lucide-react";
 
@@ -60,13 +61,24 @@ export const Footer: React.FC = () => {
         <div className="py-12 md:py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 border-b border-limestone/15">
           {/* Brand & Address */}
           <div className="lg:col-span-4 space-y-4">
-            <div>
-              <span className="font-serif text-2xl text-limestone">
-                {SITE_DATA.brand.name}
-              </span>
-              <span className="block text-[10px] uppercase font-mono tracking-label text-brass mt-1">
-                by {SITE_DATA.brand.developer} • Kanpur
-              </span>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-[2px] border border-brass/50 overflow-hidden shrink-0 bg-charcoal">
+                <Image
+                  src="/images/arohan-emblem.png"
+                  alt="Ganga Heights by Arohan Realty emblem"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <span className="font-serif text-2xl text-limestone block leading-none">
+                  {SITE_DATA.brand.name}
+                </span>
+                <span className="block text-[10px] uppercase font-mono tracking-label text-brass mt-1">
+                  by {SITE_DATA.brand.developer} • Kanpur
+                </span>
+              </div>
             </div>
 
             <div className="space-y-2 text-xs font-sans text-limestone/70 pt-2">
@@ -142,6 +154,30 @@ export const Footer: React.FC = () => {
           <div className="flex items-center gap-6">
             <span>UP RERA: {SITE_DATA.brand.reraNumber}</span>
             <span>CIVIL LINES • KANPUR</span>
+          </div>
+        </div>
+
+        {/* Portfolio & Showcase Disclaimer + Arivra Design Labs Attribution */}
+        <div className="mt-8 pt-6 border-t border-limestone/15 text-center space-y-3">
+          <p className="text-[11px] font-sans text-limestone/65 max-w-4xl mx-auto leading-relaxed">
+            <strong className="text-brass">Notice &amp; Disclaimer:</strong> This website is an interactive concept application engineered solely for portfolio demonstration and showcase purposes. Ganga Heights and Arohan Realty are fictional entities. All contact details, telephone numbers, UP RERA registration strings, floor plan prices, and resident testimonials are simulated dummy data. Please do not contact these numbers for real property inquiries or site visits.
+          </p>
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-1.5 rounded-[2px] bg-limestone/5 border border-brass/35 text-xs font-sans text-limestone">
+            <span className="font-mono font-semibold tracking-wider uppercase text-[10px] text-brass">
+              ARIVRA Demo
+            </span>
+            <span className="text-limestone/40">•</span>
+            <span className="text-limestone/80">
+              A product by{" "}
+              <a
+                href="https://arivra.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-limestone hover:text-brass underline underline-offset-4 transition-colors"
+              >
+                Arivra Design Labs
+              </a>
+            </span>
           </div>
         </div>
       </div>

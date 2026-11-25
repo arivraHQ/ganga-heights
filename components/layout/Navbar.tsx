@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { SITE_DATA } from "@/content/site";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
@@ -44,13 +45,25 @@ export const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Wordmark Left */}
-            <Link href="/" className="group flex flex-col items-start focus:outline-none">
-              <span className="font-serif text-xl sm:text-2xl tracking-tight text-ink font-normal leading-none group-hover:text-brass transition-colors duration-300">
-                {SITE_DATA.brand.name}
-              </span>
-              <span className="text-[9px] uppercase tracking-label font-sans font-medium text-muted mt-1">
-                by Arohan Realty • Kanpur
-              </span>
+            <Link href="/" className="group flex items-center gap-3 focus:outline-none">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-[2px] border border-brass/50 overflow-hidden shrink-0 bg-charcoal">
+                <Image
+                  src="/images/arohan-emblem.png"
+                  alt="Ganga Heights by Arohan Realty emblem"
+                  width={40}
+                  height={40}
+                  priority
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex flex-col items-start">
+                <span className="font-serif text-xl sm:text-2xl tracking-tight text-ink font-normal leading-none group-hover:text-brass transition-colors duration-300">
+                  {SITE_DATA.brand.name}
+                </span>
+                <span className="text-[9px] uppercase tracking-label font-sans font-medium text-muted mt-1">
+                  by Arohan Realty • Kanpur
+                </span>
+              </div>
             </Link>
 
             {/* Desktop Navigation Links */}
